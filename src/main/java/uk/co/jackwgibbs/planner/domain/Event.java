@@ -1,4 +1,4 @@
-package uk.co.jackwgibbs.planner.model;
+package uk.co.jackwgibbs.planner.domain;
 
 import jakarta.persistence.*;
 
