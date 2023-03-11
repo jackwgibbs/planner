@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Event</title>
+    <script type="text/javascript" src="js/eventsApi.js"></script>
+</head>
+
+<body>
+<h1>Add Event</h1>
+
+<form method="POST" onsubmit="addNewEvent()" id="newEventForm">
+    <label for="title"></label>
+    <input id="title" name="title" type="text">
+
+    <label for="description"></label>
+    <input id="description" name="description" type="text">
+
+    <label for="start_date"></label>
+    <input id="start_date" name="start_date" type="datetime-local">
+
+    <label for="end_date"></label>
+    <input id="end_date" name="end_date" type="datetime-local">
+
+    <label for="location"></label>
+    <input id="location" name="location" type="datetime-local">
+
+    <input type="submit">
+</form>
+
+<p><a href="/showEvents">Show Events</a></p>
+</body>
+</html>
