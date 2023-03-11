@@ -1,5 +1,8 @@
 package uk.co.jackwgibbs.planner.ports.primary;
 
+import uk.co.jackwgibbs.planner.domain.Event;
+
 public interface PlannerControllerInterface {
-    public String home();
+    public Iterable<Event> getAllEvents();
+    public Event createNewEvent(Event event);
 }
