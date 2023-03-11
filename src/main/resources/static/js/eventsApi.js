@@ -21,7 +21,19 @@ function addNewEvent() {
     .then(res => res.json())
     .then(handle500Error)
     .then(json => {
-      alert(`Successfully added boot with id ${json.id}: (${JSON.stringify(json)})`);
+      alert(`Successfully added event with id ${json.id}: (${JSON.stringify(json)})`);
+    })
+    .catch(renderError);
+}
+
+function deleteEventById(bootId) {
+  fetch(`/deleteevent/${bootId}`, {
+    method: "DELETE"
+  })
+    .then(res => res.json())
+    .then(handle500Error)
+    .then(json => {
+      alert(`Deleted event ${json.id} from the database (${JSON.stringify(json)}).`);
     })
     .catch(renderError);
 }

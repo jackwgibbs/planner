@@ -24,4 +24,9 @@ public class PlannerController implements PlannerControllerInterface {
         Event newEvent = this.eventRepositoryInterface.save(event);
         return newEvent;
     }
+
+    @DeleteMapping("/deleteevent/{id}")
+    public void deleteEvent(@PathVariable("id") String id) {
+        this.eventRepositoryInterface.deleteById((Integer.valueOf(id)));
+    }
 }

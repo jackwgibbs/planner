@@ -8,6 +8,27 @@
 <h1>Add Event</h1>
 
 <p th:text=${events}></p>
+
+<div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Location</th>
+            <th>Delete</th>
+        </tr>
+            <tr th:each="event: ${events}">
+            <td th:text="${event.name}"></td>
+            <td th:text="${event.description}"></td>
+            <td th:text="${event.start_date}"></td>
+            <td th:text="${event.end_date}"></td>
+            <td th:text="${event.location}"></td>
+            <td><button th:attr="onclick=|deleteEventById('${event.id}')|">Delete</button></td>
+        </tr>
+    </table>
+</div>
 <p><a href="/addEvent">Add new event</a></p>
 
 </body>
