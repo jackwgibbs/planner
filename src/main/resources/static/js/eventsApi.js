@@ -26,8 +26,8 @@ function addNewEvent() {
     .catch(renderError);
 }
 
-function deleteEventById(bootId) {
-  fetch(`/deleteevent/${bootId}`, {
+function deleteEventById(eventId) {
+  fetch(`/deleteevent/${eventId}`, {
     method: "DELETE"
   })
     .then(res => res.json())

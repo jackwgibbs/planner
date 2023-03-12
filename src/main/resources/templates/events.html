@@ -17,6 +17,7 @@
             <th>Start Time</th>
             <th>End Time</th>
             <th>Location</th>
+            <th>Details</th>
             <th>Delete</th>
         </tr>
             <tr th:each="event: ${events}">
@@ -25,11 +26,13 @@
             <td th:text="${event.start_date}"></td>
             <td th:text="${event.end_date}"></td>
             <td th:text="${event.location}"></td>
+            <td><a th:attr="href=|showevents/${event.id}|"><button>Details</button></a></td>
             <td><button th:attr="onclick=|deleteEventById('${event.id}')|">Delete</button></td>
         </tr>
     </table>
 </div>
-<p><a href="/addEvent">Add new event</a></p>
+<p><a href="/addevent">Add new event</a></p>
+<p><a href="/showevents">Show events</a></p>
 
 </body>
 </html>

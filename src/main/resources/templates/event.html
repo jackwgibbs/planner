@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Event</title>
+    <script type="text/javascript" src="js/eventsApi.js"></script>
+</head>
+<body>
+<h1>Event</h1>
+
+<p th:text="${event.name}"></p>
+<p th:text="${event.description}"></p>
+<p th:text="${event.start_date}"></p>
+<p th:text="${event.end_date}"></p>
+<p th:text="${event.location}"></p>
+<p><button th:attr="onclick=|deleteEventById('${event.id}')|">Delete</button></p>
+
+<p><a href="/addevent">Add new event</a></p>
+<p><a href="/showevents">Show events</a></p>
+
+</body>
+</html>
